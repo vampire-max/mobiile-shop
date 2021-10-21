@@ -1,0 +1,7 @@
+body {
+  font-family: 'Roboto';
+}
+
+.linear-gradient-bg {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F1F1F1 100%);
+}
