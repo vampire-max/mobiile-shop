@@ -23,7 +23,6 @@
 
 </head>
 <body class="linear-gradient-bg">
-
   <div class="content"> 
     <div class="container px-3 flex justify-between my-4">
       <h2 class="text-2xl uppercase font-bold mb-2">categories</h2>
@@ -39,7 +38,6 @@
         <img src="./img/categories1.png" alt="Categories Image">
         <img src="./img/Rectangle.png" alt="Categories Image" class="h-full mb-4 -ml-4">
       </div>
-
       <div class="absolute inset-y-1/4 w-full py-1">
         <div class="flex justify-between pl-14 pr-6 text-white">
           <div>
@@ -48,7 +46,7 @@
             </div>
             <h6 class="text-sm text-white">Shoes</h6>
           </div>
-          <div>
+          <div class="ml-4">
             <div class="bg-opacity-30 rounded-full h-8 w-8 flex items-center justify-center bg-white">
               <i class="fas fa-tshirt"></i>
             </div>
@@ -65,21 +63,40 @@
     </div>
     <div class="container px-3">
       <h4 class="text-lg text-gray-800">Trending</h4>
-    </div>
-    <div>
-      <h4 class="text-lg text-gray-800">T-Shirts</h4>
-      <h6 class="text-sm text-gray-800">See All</h6>
-      <div>
-        <h5 class="text-base text-gray-500 font-light">T-Shirt 1</h5>
-        <h6 class="text-xs text-gray-500 font-bold">$21.99</h6>
+
+      <div class="relative">
+        <img src="./img/trending.png" alt="Trending Image" class="img-fluid">
+        <div class="absolute top-8 inset-x-14 w-2/5">
+          <h2 class="text-2xl text-white">Explore Our
+            Super Cool
+            Products</h2>
+          <button class="text-white text-sm bg-yellow rounded-full px-6 py-1 mt-2">Explore</button>  
+        </div>
       </div>
-    </div>  
+    </div>
+    <div class="container px-3 mb-7">
+      <div class="flex justify-between mb-4">
+        <h4 class="text-lg text-gray-800">T-Shirts</h4>
+        <h6 class="text-sm text-gray-800">See All</h6>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-white rounded-lg pt-10 pb-4 px-3.5 relative text-white">
+          <div class="absolute top-2 right-2 rounded-full bg-yellow px-1.5 py-0.5 text-xs"><i class="fas fa-star text-xs text-white mr-0.5"></i> 4.5</div>
+          <img src="./img/t-shirt1.png" alt="T-shirt" class="mx-auto mb-3.5">
+          <h5 class="text-base text-gray-500 font-light">T-Shirt 1</h5>
+          <h6 class="text-xs text-gray-500 font-bold">$21.99</h6>
+        </div>
+        <div class="bg-white rounded-lg pt-10 pb-4 px-3.5 relative text-white">
+          <div class="absolute top-2 right-2 rounded-full bg-yellow px-1.5 py-0.5 text-xs"><i class="fas fa-star text-xs text-white mr-0.5"></i> 4.5</div>
+          <img src="./img/t-shirt2.png" alt="T-shirt" class="mx-auto mb-3.5">
+          <h5 class="text-base text-gray-500 font-light">T-Shirt 2</h5>
+          <h6 class="text-xs text-gray-500 font-bold">$23.99</h6>
+        </div>
+      </div>
       <div>
-        <i class="far fa-star text-xs"></i>
       </div>
     </div>  
   </div>
-  
   <footer class="bg-white rounded-t-3xl py-4 px-10 text-gray-300 text-center">
     <div class="container mx-auto">
       <ul class="flex justify-between">
