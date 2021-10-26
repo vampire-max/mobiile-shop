@@ -33,11 +33,14 @@
         <i class="fas fa-star text-yellow mr-2"></i>
         <i class="fas fa-star text-yellow mr-2"></i>
         <i class="fas fa-star text-yellow mr-2"></i>
-        <i class="fas fa-star text-gray-300"></i>
+        <i class="fas fa-star text-gray-300 focus:text-yellow"></i>
       </div>
       <div class="flex justify-between">
         <h2 class="text-2xl text-gray-800 mb-6">Watch</h2>
-        <i class="fas fa-heart text-red text-xl"></i>
+        <a href="#"><i class="far fa-heart text-red text-xl focus:opacity-0"></i></a>
+        <a href="#"><i class="fas fa-heart text-red text-xl opacity-0 group-focus:opacity-1"></i></a>
+
+        
       </div>
       <p class="text-sm text-gray-700 mb-11">Lorem ipsum dolor sit amet, consetetur
         sadipscing elitr, sed diam nonumy eirmod tempor
@@ -46,15 +49,38 @@
         justo duo dolores et ea rebum. Stet clita kasd </p>
         <div class="mb-7">
           <p class="uppercase text-xs text-gray-500 font-medium mb-4">SELECT COLOR</p>
-          <div class="flex justify-between">
-            <div class="rounded-full bg-gray-dark text-center w-9 h-9 flex items-center justify-center">
-              <i class="fas fa-check text-white"></i>
+          <div class="flex justify-between" x-data="{selected: 'gray'}">
+            <div class="rounded-full cursor-pointer bg-gray-dark text-center w-9 h-9 flex items-center justify-center" @click="selected = 'gray'">
+              <template x-if="selected=='gray'">
+                <i class="fas fa-check text-white"></i>
+              </template>
             </div>
-            <div class="rounded-full bg-yellow w-9 h-9"></div>
-            <div class="rounded-full bg-blue w-9 h-9"></div>
-            <div class="rounded-full bg-white w-9 h-9"></div>
-            <div class="rounded-full bg-gray-300 w-9 h-9"></div>
-            <div class="rounded-full bg-purple w-9 h-9"></div>
+            <div class="rounded-full cursor-pointer bg-yellow text-center w-9 h-9 flex items-center justify-center" @click="selected = 'yellow'">
+              <template x-if="selected=='yellow'">
+                <i class="fas fa-check text-white"></i>
+              </template>
+            </div>
+            <!-- <div class="rounded-full cursor-pointer bg-yellow w-9 h-9"></div> -->
+            <div class="rounded-full cursor-pointer bg-blue text-center w-9 h-9 flex items-center justify-center"  @click="selected = 'blue'">
+              <template x-if="selected=='blue'">
+                <i class="fas fa-check text-white"></i>
+              </template>
+            </div>
+            <div class="rounded-full cursor-pointer bg-white text-center w-9 h-9 flex items-center justify-center" @click="selected = 'white'">
+              <template x-if="selected=='white'">
+                <i class="fas fa-check text-gray-dark"></i>
+              </template>
+            </div>
+            <div class="rounded-full cursor-pointer bg-gray-300 text-center w-9 h-9 flex items-center justify-center" @click="selected = 'grayLight'">
+              <template x-if="selected=='grayLight'">
+                <i class="fas fa-check text-white"></i>
+              </template>
+            </div>
+            <div class="rounded-full cursor-pointer bg-purple text-center w-9 h-9 flex items-center justify-center" @click="selected = 'purple'">
+              <template x-if="selected=='purple'">
+                <i class="fas fa-check text-white"></i>
+              </template>
+            </div>
           </div>
         </div>
     </div>
@@ -68,5 +94,6 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
 </body>
 </html>

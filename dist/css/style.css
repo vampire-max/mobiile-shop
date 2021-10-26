@@ -601,7 +601,7 @@ video {
 }
 
 .container {
-  width: 100%;
+  max-width: 100%;
 }
 
 @media (min-width: 640px) {
@@ -618,19 +618,13 @@ video {
 
 @media (min-width: 1024px) {
   .container {
-    max-width: 1024px;
+    max-width: 1280px;
   }
 }
 
 @media (min-width: 1280px) {
   .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
+    max-width: 1400px;
   }
 }
 
@@ -716,6 +710,22 @@ video {
 }
 
 .invisible {
+  visibility: hidden;
+}
+
+.hover\:visible:hover {
+  visibility: visible;
+}
+
+.hover\:invisible:hover {
+  visibility: hidden;
+}
+
+.focus\:visible:focus {
+  visibility: visible;
+}
+
+.focus\:invisible:focus {
   visibility: hidden;
 }
 
@@ -33150,40 +33160,6 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:container {
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
-    .sm\:container {
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .sm\:container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .sm\:container {
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .sm\:container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    .sm\:container {
-      max-width: 1536px;
-    }
-  }
-
   .sm\:sr-only {
     position: absolute;
     width: 1px;
@@ -33266,6 +33242,22 @@ video {
   }
 
   .sm\:invisible {
+    visibility: hidden;
+  }
+
+  .sm\:hover\:visible:hover {
+    visibility: visible;
+  }
+
+  .sm\:hover\:invisible:hover {
+    visibility: hidden;
+  }
+
+  .sm\:focus\:visible:focus {
+    visibility: visible;
+  }
+
+  .sm\:focus\:invisible:focus {
     visibility: hidden;
   }
 
@@ -65262,40 +65254,6 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:container {
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
-    .md\:container {
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .md\:container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .md\:container {
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .md\:container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    .md\:container {
-      max-width: 1536px;
-    }
-  }
-
   .md\:sr-only {
     position: absolute;
     width: 1px;
@@ -65378,6 +65336,22 @@ video {
   }
 
   .md\:invisible {
+    visibility: hidden;
+  }
+
+  .md\:hover\:visible:hover {
+    visibility: visible;
+  }
+
+  .md\:hover\:invisible:hover {
+    visibility: hidden;
+  }
+
+  .md\:focus\:visible:focus {
+    visibility: visible;
+  }
+
+  .md\:focus\:invisible:focus {
     visibility: hidden;
   }
 
@@ -97374,40 +97348,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:container {
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
-    .lg\:container {
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .lg\:container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .lg\:container {
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .lg\:container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    .lg\:container {
-      max-width: 1536px;
-    }
-  }
-
   .lg\:sr-only {
     position: absolute;
     width: 1px;
@@ -97490,6 +97430,22 @@ video {
   }
 
   .lg\:invisible {
+    visibility: hidden;
+  }
+
+  .lg\:hover\:visible:hover {
+    visibility: visible;
+  }
+
+  .lg\:hover\:invisible:hover {
+    visibility: hidden;
+  }
+
+  .lg\:focus\:visible:focus {
+    visibility: visible;
+  }
+
+  .lg\:focus\:invisible:focus {
     visibility: hidden;
   }
 
@@ -129486,40 +129442,6 @@ video {
 }
 
 @media (min-width: 1280px) {
-  .xl\:container {
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
-    .xl\:container {
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .xl\:container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .xl\:container {
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .xl\:container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    .xl\:container {
-      max-width: 1536px;
-    }
-  }
-
   .xl\:sr-only {
     position: absolute;
     width: 1px;
@@ -129602,6 +129524,22 @@ video {
   }
 
   .xl\:invisible {
+    visibility: hidden;
+  }
+
+  .xl\:hover\:visible:hover {
+    visibility: visible;
+  }
+
+  .xl\:hover\:invisible:hover {
+    visibility: hidden;
+  }
+
+  .xl\:focus\:visible:focus {
+    visibility: visible;
+  }
+
+  .xl\:focus\:invisible:focus {
     visibility: hidden;
   }
 
@@ -161598,40 +161536,6 @@ video {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:container {
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
-    .\32xl\:container {
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .\32xl\:container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .\32xl\:container {
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .\32xl\:container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    .\32xl\:container {
-      max-width: 1536px;
-    }
-  }
-
   .\32xl\:sr-only {
     position: absolute;
     width: 1px;
@@ -161714,6 +161618,22 @@ video {
   }
 
   .\32xl\:invisible {
+    visibility: hidden;
+  }
+
+  .\32xl\:hover\:visible:hover {
+    visibility: visible;
+  }
+
+  .\32xl\:hover\:invisible:hover {
+    visibility: hidden;
+  }
+
+  .\32xl\:focus\:visible:focus {
+    visibility: visible;
+  }
+
+  .\32xl\:focus\:invisible:focus {
     visibility: hidden;
   }
 
