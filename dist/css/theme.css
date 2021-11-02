@@ -5,3 +5,12 @@ body {
 .linear-gradient-bg {
   background: linear-gradient(180deg, #FFFFFF 0%, #F1F1F1 100%);
 }
+
+.login-bg {
+  background-image: url(../img/login.png);
+  background-repeat: no-repeat;
+}
+
+i {
+  cursor: pointer;
+}

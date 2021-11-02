@@ -21,6 +21,14 @@
   <!-- Fontawesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" type="text/css" />
 
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <style>
+    .swiper-slide {
+      width: 80%;
+    }
+  </style>
 </head>
 <body>
   <div class="linear-gradient-bg"> 
@@ -67,27 +75,49 @@
             <div class="bg-opacity-30 rounded-full h-8 w-8 flex items-center justify-center bg-white">
               <i class="fas fa-chevron-right"></i>
             </div>
-            <h6 class="text-sm text-white"><a href="./categoryPage.html" target="_blank"></a> See All</h6>
+            <a href="./categoryPage.html" target="_blank"><h6 class="text-sm text-white">See All</h6></a>
           </div>
         </div>
       </div>
     </div>  
     <div class="container px-3 mt-4">
       <h4 class="text-lg text-gray-800 mb-2">Trending</h4>
-      <div class="relative">
-        <img src="./img/trending1.png" alt="Trending Image" class="img-fluid">
-        <div class="absolute top-8 inset-x-14 w-2/5">
-          <h2 class="text-2xl text-white">Explore Our
-            Super Cool
-            Products</h2>
-          <button class="text-white text-sm bg-yellow rounded-full px-6 py-1 mt-2">Explore</button>  
-        </div>
+      <div x-data="{swiper: null}"
+          x-init= "init()"
+          class="flex flex-row"
+          >
+          <div class="swiper mySwiper w-full" >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="relative">
+                  <img src="./img/trending1.png" alt="Trending Image" class="img-fluid">
+                  <div class="absolute top-8 inset-x-14 w-2/5">
+                    <h2 class="text-2xl text-white">Explore Our
+                      Super Cool
+                      Products</h2>
+                    <button class="text-white text-sm bg-yellow rounded-full px-6 py-1 mt-2">Explore</button>  
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="relative">
+                  <img src="./img/trending1.png" alt="Trending Image" class="img-fluid">
+                  <div class="absolute top-8 inset-x-14 w-2/5">
+                    <h2 class="text-2xl text-white">Explore Our
+                      Super Cool
+                      Products</h2>
+                    <button class="text-white text-sm bg-yellow rounded-full px-6 py-1 mt-2">Explore</button>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
-    <div class="container px-3 mb-7">
+    <div class="container px-3 mt-7 pb-7">
       <div class="flex justify-between mb-4">
         <h4 class="text-lg text-gray-800">T-Shirts</h4>
-        <h6 class="text-sm text-gray-800">See All</h6>
+        <a href="./productpage.html"><h6 class="text-sm text-gray-800">See All</h6></a>
       </div>
       <div class="grid grid-cols-2 gap-4">
         <div class="bg-white rounded-lg pt-10 pb-4 px-3.5 relative text-white">
@@ -110,42 +140,55 @@
       <div>
       </div>
     </div>  
+    <footer class="bg-white rounded-t-3xl py-4 px-10 text-gray-300 text-center">
+      <div class="container mx-auto">
+        <ul class="flex justify-between">
+          <li class="text-yellow">
+            <a href="home.html">
+              <i class="fas fa-home"></i>
+              <p class="text-xs">Home</p>
+            </a>
+          </li>
+          <li>
+            <a href="./productpage.html" target="_blank">
+              <i class="fas fa-search"></i>
+              <p class="text-xs">Search</p>
+            </a>
+          </li>
+          <li>
+            <a href="./productpage.html" target="_blank">
+              <i class="far fa-heart"></i>
+              <p class="text-xs">Favorites</p>
+            </a>
+          </li>
+          <li>
+            <a href="./productpage.html" target="_blank">
+              <i class="far fa-user"></i>
+              <p class="text-xs">Profile</p>
+            </a>
+          </li>
+          <li>
+            <a href="./productpage.html" target="_blank">
+              <i class="fas fa-bars"></i>
+              <p class="text-xs">More</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </div>
-  <footer class="bg-white rounded-t-3xl py-4 px-10 text-gray-300 text-center">
-    <div class="container mx-auto">
-      <ul class="flex justify-between">
-        <li class="text-yellow">
-          <a href="home.html">
-            <i class="fas fa-home"></i>
-            <p class="text-xs">Home</p>
-          </a>
-        </li>
-        <li>
-          <a href="./productpage.html" target="_blank">
-            <i class="fas fa-search"></i>
-            <p class="text-xs">Search</p>
-          </a>
-        </li>
-        <li>
-          <a href="./productpage.html" target="_blank">
-            <i class="far fa-heart"></i>
-            <p class="text-xs">Favorites</p>
-          </a>
-        </li>
-        <li>
-          <a href="./productpage.html" target="_blank">
-            <i class="far fa-user"></i>
-            <p class="text-xs">Profile</p>
-          </a>
-        </li>
-        <li>
-          <a href="./productpage.html" target="_blank">
-            <i class="fas fa-bars"></i>
-            <p class="text-xs">More</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
+
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    function init() {
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        loop: true,
+      });
+    }
+  </script>
 </body>
 </html>

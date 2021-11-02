@@ -23,25 +23,31 @@
 
 </head>
 <body class="linear-gradient-bg">
-  <div class="content">
+  <div class="content relative" x-data="alpineInit()">
     <div class="container">
-      <img src="./img/product1.png" alt="Watch product" class="mx-auto mt-11 mb-10">
+      <img x-bind:src="imgSrc" alt="Watch product" class="mx-auto mt-11 mb-10">
     </div>
     <div class="linear-gradient-bg rounded-t-3xl px-8 pt-7">
       <div class="flex mb-4">
-        <i class="fas fa-star text-yellow mr-2"></i>
-        <i class="fas fa-star text-yellow mr-2"></i>
-        <i class="fas fa-star text-yellow mr-2"></i>
-        <i class="fas fa-star text-yellow mr-2"></i>
-        <i class="fas fa-star text-gray-300 focus:text-yellow"></i>
+        <i class="fas fa-star text-yellow mr-2 cursor-pointer"></i>
+        <i class="fas fa-star text-yellow mr-2 cursor-pointer"></i>
+        <i class="fas fa-star text-yellow mr-2 cursor-pointer"></i>
+        <i class="fas fa-star text-yellow mr-2 cursor-pointer"></i>
+        <i class="fas fa-star text-gray-300 cursor-pointer focus:text-yellow"></i>
       </div>
-      <div class="flex justify-between">
+      <div class="flex justify-between" x-data="{selected: 'show'}">
         <h2 class="text-2xl text-gray-800 mb-6">Watch</h2>
-        <a href="#"><i class="far fa-heart text-red text-xl focus:opacity-0"></i></a>
-        <a href="#"><i class="fas fa-heart text-red text-xl opacity-0 group-focus:opacity-1"></i></a>
-
-        
+        <div  @click="selected = 'hidden'">
+          <template x-if="selected=='show'">
+            <i class="far fa-heart text-red text-xl cursor-pointer"></i>  
+          </template>
+            <template x-if="selected=='hidden'">
+              <i class="fas fa-heart text-red text-xl cursor-pointer"></i>  
+            </template>
+          </i>
+        </div>
       </div>
+
       <p class="text-sm text-gray-700 mb-11">Lorem ipsum dolor sit amet, consetetur
         sadipscing elitr, sed diam nonumy eirmod tempor
         invidunt ut labore et dolore magna aliquyam erat,
@@ -49,34 +55,35 @@
         justo duo dolores et ea rebum. Stet clita kasd </p>
         <div class="mb-7">
           <p class="uppercase text-xs text-gray-500 font-medium mb-4">SELECT COLOR</p>
-          <div class="flex justify-between" x-data="{selected: 'gray'}">
-            <div class="rounded-full cursor-pointer bg-gray-dark text-center w-9 h-9 flex items-center justify-center" @click="selected = 'gray'">
+          <div class="flex justify-between">
+            <div class="rounded-full cursor-pointer bg-gray-dark text-center w-9 h-9 flex items-center justify-center" @click="selected = 'gray';imgSrc='./img/product1.png'">
               <template x-if="selected=='gray'">
                 <i class="fas fa-check text-white"></i>
+                <!-- <img src="./img/product1.png" alt="Watch product" class="absolute "> -->
+                
               </template>
             </div>
-            <div class="rounded-full cursor-pointer bg-yellow text-center w-9 h-9 flex items-center justify-center" @click="selected = 'yellow'">
+            <div class="rounded-full cursor-pointer bg-yellow text-center w-9 h-9 flex items-center justify-center" @click="selected = 'yellow';imgSrc='./img/product2.png'">
               <template x-if="selected=='yellow'">
                 <i class="fas fa-check text-white"></i>
               </template>
             </div>
-            <!-- <div class="rounded-full cursor-pointer bg-yellow w-9 h-9"></div> -->
-            <div class="rounded-full cursor-pointer bg-blue text-center w-9 h-9 flex items-center justify-center"  @click="selected = 'blue'">
+            <div class="rounded-full cursor-pointer bg-blue text-center w-9 h-9 flex items-center justify-center"  @click="selected = 'blue';imgSrc='./img/product3.png'">
               <template x-if="selected=='blue'">
                 <i class="fas fa-check text-white"></i>
               </template>
             </div>
-            <div class="rounded-full cursor-pointer bg-white text-center w-9 h-9 flex items-center justify-center" @click="selected = 'white'">
+            <div class="rounded-full cursor-pointer bg-white text-center w-9 h-9 flex items-center justify-center" @click="selected = 'white';imgSrc='./img/product4.png'">
               <template x-if="selected=='white'">
                 <i class="fas fa-check text-gray-dark"></i>
               </template>
             </div>
-            <div class="rounded-full cursor-pointer bg-gray-300 text-center w-9 h-9 flex items-center justify-center" @click="selected = 'grayLight'">
+            <div class="rounded-full cursor-pointer bg-gray-300 text-center w-9 h-9 flex items-center justify-center" @click="selected = 'grayLight';imgSrc='./img/product5.png'">
               <template x-if="selected=='grayLight'">
                 <i class="fas fa-check text-white"></i>
               </template>
             </div>
-            <div class="rounded-full cursor-pointer bg-purple text-center w-9 h-9 flex items-center justify-center" @click="selected = 'purple'">
+            <div class="rounded-full cursor-pointer bg-purple text-center w-9 h-9 flex items-center justify-center" @click="selected = 'purple';imgSrc='./img/product6.png'">
               <template x-if="selected=='purple'">
                 <i class="fas fa-check text-white"></i>
               </template>
@@ -88,12 +95,20 @@
   <footer class="bg-white rounded-t-3xl py-4 px-8 text-gray-300 text-center">
     <div class="container flex justify-between items-center">
       <h3 class="text-yellow text-xl pl-5 mb-0">$89.99</h3>
-      <div class="rounded-full bg-yellow py-1 border-4 border-yellow text-white pl-8 ">
+      <div class="rounded-full bg-yellow py-1 border-4 border-yellow text-white pl-8 cursor-pointer">
         Add to cart
         <a href="./cartPage.html"><button class="bg-white rounded-full ml-5 px-4 py-2"><i class="fas fa-arrow-right text-yellow"></i></button></a>
       </div>
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+  <script>
+    function alpineInit() {
+      return {
+        imgSrc: "./img/product1.png",
+        selected: 'gray'
+      };
+    }
+  </script>
 </body>
 </html>
